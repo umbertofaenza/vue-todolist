@@ -20,6 +20,10 @@ li {
   cursor: pointer;
 }
 
+.task {
+  cursor: pointer;
+}
+
 .task-done {
   text-decoration: line-through;
 }

@@ -55,7 +55,7 @@
                 <ul>
                     <!-- list item -->
                     <li v-for="(object, index) in todoList">
-                        <span :class="(object.done) ? 'task-done' : ''">
+                        <span @click="isTaskDone(index)" class="task" :class="(object.done) ? 'task-done' : ''">
                             {{ object.text }}
                         </span>
 
