@@ -36,9 +36,19 @@
             </header>
 
             <main>
+                <!-- todo list -->
                 <ul>
-                    <li v-for="object in todoList" :class="(object.done) ? 'task-done' : ''">
-                        {{ object.text }}
+                    <!-- list item -->
+                    <li v-for="(object, index) in todoList">
+                        <span :class="(object.done) ? 'task-done' : ''">
+                            {{ object.text }}
+                        </span>
+
+
+                        <!-- dismiss -->
+                        <div @click="dismissTask(index)" class="dismiss-control">
+                            <i class="fa-solid fa-x"></i>
+                        </div>
                     </li>
                 </ul>
             </main>

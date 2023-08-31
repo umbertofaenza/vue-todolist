@@ -20,4 +20,10 @@ createApp({
       ],
     };
   },
+
+  methods: {
+    dismissTask(index) {
+      this.todoList.splice(index, 1);
+    },
+  },
 }).mount("#app");
