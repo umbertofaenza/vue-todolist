@@ -30,6 +30,20 @@
 
 <body>
     <div class="wrapper" id="app">
+        <div class="container">
+            <header>
+                <h1 class="text-center py-3">{{ pageTitle }}</h1>
+            </header>
+
+            <main>
+                <ul>
+                    <li v-for="object in todoList" :class="(object.done == true) ? 'task-done' : ''">
+                        {{ object.text }}
+                    </li>
+                </ul>
+            </main>
+
+        </div>
     </div>
 </body>
 
