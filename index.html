@@ -52,6 +52,14 @@
                     </div>
                 </div>
 
+                <!-- alert -->
+                <div class="alert d-flex justify-content-center py-0">
+                    <div class="alert w-50 my-1 py-1 text-center" :class="'alert-' + alert.type" v-show="alert.display"
+                        role="alert">
+                        {{ alert.text }}
+                    </div>
+                </div>
+
                 <ul>
                     <!-- list item -->
                     <li v-for="(object, index) in todoList">

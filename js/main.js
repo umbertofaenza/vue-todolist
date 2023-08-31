@@ -25,14 +25,28 @@ createApp({
         text: "",
         done: false,
       },
+      alert: {
+        text: "",
+        type: "",
+        display: false,
+      },
     };
   },
 
   methods: {
     addTask() {
+      // empty input control
+      if (!this.newTask.text) {
+        this.alert.text = "Inserisci qualcosa!";
+        this.alert.type = "danger";
+        this.alert.display = true;
+
+        return;
+      }
+
       this.todoList.push(this.newTask);
       this.newTask = {};
-      console.log(this.todoList);
+      this.alert.display = false;
     },
     dismissTask(index) {
       this.todoList.splice(index, 1);
