@@ -42,7 +42,8 @@
                 <div class="task-input d-flex justify-content-center">
                     <div class="input-group mx-3 w-50">
                         <!-- input text -->
-                        <input type="text" class="form-control" placeholder="Cosa devi fare?" v-model="newTask.text">
+                        <input @keydown.enter="addTask()" type="text" class="form-control" placeholder="Cosa devi fare?"
+                            v-model="newTask.text">
 
                         <!-- input button -->
                         <div class="input-group-append">
