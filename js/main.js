@@ -3,7 +3,9 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      // page title
       pageTitle: "To Do!",
+      //   to-do list
       todoList: [
         {
           text: "Fare la spesa",
@@ -18,10 +20,20 @@ createApp({
           done: false,
         },
       ],
+      //   new task object
+      newTask: {
+        text: "",
+        done: false,
+      },
     };
   },
 
   methods: {
+    addTask() {
+      this.todoList.push(this.newTask);
+      this.newTask = {};
+      console.log(this.todoList);
+    },
     dismissTask(index) {
       this.todoList.splice(index, 1);
     },
